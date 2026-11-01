@@ -1,6 +1,6 @@
 import type { AWS } from '@serverless/typescript';
 
-import hello from '@functions/hello';
+import getSentences from '@functions/get-sentences';
 
 const serverlessConfiguration: AWS = {
   service: 'backend',
@@ -19,7 +19,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: { hello },
+  functions: { getSentences },
   package: { individually: true },
   custom: {
     esbuild: {
